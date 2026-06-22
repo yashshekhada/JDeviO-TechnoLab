@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JDevio TechnoLab — Future-Ready Tech Solutions</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Particle Canvas -->
+  <canvas id="particles"></canvas>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <span class="logo-icon">⚡</span>
+      <span class="logo-text">JDevio<span class="highlight">TechnoLab</span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">🚀 Welcome to the Future</div>
+      <h1 class="hero-title">
+        <span class="text-reveal">Building</span>
+        <span class="gradient-text">Intelligent Systems</span>
+        <span class="text-reveal">for Tomorrow</span>
+      </h1>
+      <p class="hero-subtitle">
+        From AI-powered applications to embedded microcontrollers — 
+        we engineer solutions that push boundaries.
+      </p>
+      <div class="hero-cta">
+        <a href="#services" class="btn btn-primary">Explore Services</a>
+        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="floating-orb orb-1"></div>
+      <div class="floating-orb orb-2"></div>
+      <div class="floating-orb orb-3"></div>
+      <div class="hero-globe">
+        <div class="globe-ring ring-1"></div>
+        <div class="globe-ring ring-2"></div>
+        <div class="globe-ring ring-3"></div>
+        <div class="globe-core"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="section-header">
+      <span class="section-tag">What We Do</span>
+      <h2>Our Specialties</h2>
+      <p>Cutting-edge technology services tailored to your vision</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card" data-delay="0">
+        <div class="card-icon">
+          <div class="icon-circle">🦞</div>
+        </div>
+        <h3>OpenClaw Architecture</h3>
+        <p>Expert deployment and customization of OpenClaw agent infrastructure. Multi-agent orchestration, plugin development, and secure gateway configuration for enterprise-grade AI automation.</p>
+        <div class="card-tags">
+          <span>Agent Systems</span>
+          <span>Plugin Dev</span>
+          <span>Gateway Config</span>
+        </div>
+        <div class="card-glow"></div>
+      </div>
+
+      <div class="service-card" data-delay="100">
+        <div class="card-icon">
+          <div class="icon-circle">📱</div>
+        </div>
+        <h3>Mobile App Development</h3>
+        <p>Native and cross-platform mobile applications for iOS and Android. React Native, Flutter, and Swift — beautiful UIs, smooth performance, seamless user experiences.</p>
+        <div class="card-tags">
+          <span>iOS</span>
+          <span>Android</span>
+          <span>React Native</span>
+        </div>
+        <div class="card-glow"></div>
+      </div>
+
+      <div class="service-card" data-delay="200">
+        <div class="card-icon">
+          <div class="icon-circle">🌐</div>
+        </div>
+        <h3>Web App Development</h3>
+        <p>Full-stack web applications with modern frameworks. React, Next.js, Node.js, and cloud-native architecture for scalable, high-performance web solutions.</p>
+        <div class="card-tags">
+          <span>React</span>
+          <span>Next.js</span>
+          <span>Node.js</span>
+        </div>
+        <div class="card-glow"></div>
+      </div>
+
+      <div class="service-card featured" data-delay="300">
+        <div class="card-icon">
+          <div class="icon-circle">🤖</div>
+        </div>
+        <h3>AI & Machine Learning</h3>
+        <p>Custom ML models, NLP pipelines, computer vision systems, and LLM integration. From data preprocessing to production deployment — intelligent solutions that deliver real impact.</p>
+        <div class="card-tags">
+          <span>LLMs</span>
+          <span>Computer Vision</span>
+          <span>NLP</span>
+        </div>
+        <div class="card-glow"></div>
+      </div>
+
+      <div class="service-card" data-delay="400">
+        <div class="card-icon">
+          <div class="icon-circle">🔌</div>
+        </div>
+        <h3>Microcontroller & Embedded</h3>
+        <p>IoT and embedded systems using Arduino, ESP32, STM32, and Raspberry Pi. Firmware development, sensor integration, and real-time control systems for industrial applications.</p>
+        <div class="card-tags">
+          <span>Arduino</span>
+          <span>ESP32</span>
+          <span>IoT</span>
+        </div>
+        <div class="card-glow"></div>
+      </div>
+
+      <div class="service-card" data-delay="500">
+        <div class="card-icon">
+          <div class="icon-circle">⚙️</div>
+        </div>
+        <h3>DevOps & Cloud</h3>
+        <p>CI/CD pipelines, Docker orchestration, Kubernetes clusters, and multi-cloud deployments. Infrastructure as code for reliable, repeatable, and scalable operations.</p>
+        <div class="card-tags">
+          <span>Docker</span>
+          <span>K8s</span>
+          <span>AWS</span>
+        </div>
+        <div class="card-glow"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats">
+    <div class="stat-item">
+      <span class="stat-number" data-target="50">0</span>
+      <span class="stat-label">Projects Delivered</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="30">0</span>
+      <span class="stat-label">Happy Clients</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="6">0</span>
+      <span class="stat-label">Core Specialties</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="24">0</span>
+      <span class="stat-label">7 Support</span>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="about-content">
+      <div class="section-header">
+        <span class="section-tag">Who We Are</span>
+        <h2>About JDevio TechnoLab</h2>
+      </div>
+      <p class="about-text">
+        JDevio TechnoLab is a technology powerhouse specializing in the intersection of 
+        <strong>artificial intelligence</strong>, <strong>modern web & mobile development</strong>, 
+        and <strong>embedded systems</strong>. We bridge the gap between cutting-edge software 
+        and hardware innovation — delivering end-to-end solutions from cloud to microcontroller.
+      </p>
+      <p class="about-text">
+        With expertise in OpenClaw agent infrastructure, we help businesses automate intelligently. 
+        Our approach combines deep technical knowledge with practical engineering — building systems 
+        that are not just smart, but reliable, scalable, and production-ready.
+      </p>
+      <div class="about-pillars">
+        <div class="pillar">
+          <span class="pillar-icon">🎯</span>
+          <span>Precision Engineering</span>
+        </div>
+        <div class="pillar">
+          <span class="pillar-icon">⚡</span>
+          <span>Rapid Delivery</span>
+        </div>
+        <div class="pillar">
+          <span class="pillar-icon">🔒</span>
+          <span>Secure by Design</span>
+        </div>
+        <div class="pillar">
+          <span class="pillar-icon">🔄</span>
+          <span>Continuous Innovation</span>
+        </div>
+      </div>
+    </div>
+    <div class="about-visual">
+      <div class="tech-stack">
+        <div class="stack-item" style="--x: 0; --y: 0">AI</div>
+        <div class="stack-item" style="--x: 1; --y: 0">ML</div>
+        <div class="stack-item" style="--x: 2; --y: 0">IoT</div>
+        <div class="stack-item" style="--x: 0; --y: 1">Web</div>
+        <div class="stack-item" style="--x: 1; --y: 1">Mobile</div>
+        <div class="stack-item" style="--x: 2; --y: 1">Cloud</div>
+        <div class="stack-item" style="--x: 0; --y: 2">DevOps</div>
+        <div class="stack-item" style="--x: 1; --y: 2">Embedded</div>
+        <div class="stack-item" style="--x: 2; --y: 2">OpenClaw</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="section-header">
+      <span class="section-tag">Let's Talk</span>
+      <h2>Get in Touch</h2>
+    </div>
+    <div class="contact-container">
+      <div class="contact-info">
+        <div class="contact-item">
+          <span class="contact-icon">📍</span>
+          <span>India</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">📧</span>
+          <span>hello@jdeviotechnolab.com</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">💬</span>
+          <span>WhatsApp Available</span>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <select required>
+          <option value="">Select Service</option>
+          <option>OpenClaw Architecture</option>
+          <option>Mobile App Development</option>
+          <option>Web App Development</option>
+          <option>AI & Machine Learning</option>
+          <option>Microcontroller & Embedded</option>
+          <option>Other</option>
+        </select>
+        <textarea placeholder="Tell us about your project..." rows="4" required></textarea>
+        <button type="submit" class="btn btn-primary">Send Message 🚀</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <span class="logo-text">JDevio<span class="highlight">TechnoLab</span></span>
+        <p>Engineering the future, one system at a time.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <a href="#">OpenClaw Architecture</a>
+        <a href="#">Mobile Apps</a>
+        <a href="#">Web Apps</a>
+        <a href="#">AI & ML</a>
+        <a href="#">Embedded Systems</a>
+      </div>
+      <div class="footer-links">
+        <h4>Company</h4>
+        <a href="#">About</a>
+        <a href="#">Projects</a>
+        <a href="#">Blog</a>
+        <a href="#">Careers</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 JDevio TechnoLab. All rights reserved.</p>
+      <p>Crafted with ⚡ and 🤖</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
