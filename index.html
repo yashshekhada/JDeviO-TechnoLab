@@ -3,421 +3,447 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JDevio TechnoLab — We Engineer the Future</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>JDevio TechnoLab — AI Automation & Tech Solutions</title>
+  <meta name="description" content="JDevio TechnoLab — AI-powered tech studio specializing in OpenClaw architecture, mobile & web apps, machine learning, and embedded systems.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=Inter+Tight:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Custom Cursor -->
-  <div class="cursor"></div>
-  <div class="cursor-follower"></div>
-
-  <!-- Preloader -->
-  <div class="preloader">
-    <div class="preloader-text">
-      <span class="preloader-char">J</span>
-      <span class="preloader-char">D</span>
-      <span class="preloader-char">e</span>
-      <span class="preloader-char">v</span>
-      <span class="preloader-char">i</span>
-      <span class="preloader-char">o</span>
-    </div>
-    <div class="preloader-sub">TechnoLab</div>
-  </div>
-
-  <!-- Noise Overlay -->
-  <div class="noise"></div>
-
-  <!-- Canvas Background -->
-  <canvas id="bg-canvas"></canvas>
-
   <!-- Navigation -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="#" class="nav-logo">
-        <span class="logo-mark">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-            <rect x="2" y="2" width="28" height="28" rx="8" stroke="currentColor" stroke-width="2"/>
-            <path d="M10 22V10l6 8 6-8v12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </span>
-        <span class="logo-word">JDevio<span class="logo-accent">TechnoLab</span></span>
-      </a>
-      <div class="nav-links">
-        <a href="#work" class="nav-link">Work</a>
-        <a href="#expertise" class="nav-link">Expertise</a>
-        <a href="#process" class="nav-link">Process</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#contact" class="nav-link nav-cta">Start a Project</a>
+  <nav class="nav" id="nav">
+    <div class="nav-container">
+      <div class="nav-grid">
+        <a href="#" class="nav-logo">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='184' height='44' viewBox='0 0 200 44'%3E%3Ctext x='0' y='30' font-family='DM Sans' font-weight='700' font-size='22' fill='white'%3EJDevio%3Ctspan fill='%23a78bfa'%3ETechnoLab%3C/tspan%3E%3C/text%3E%3C/svg%3E" width="184" height="44" alt="JDevio TechnoLab">
+        </a>
+        <div class="nav-links">
+          <div class="nav-dropdown">
+            <div class="nav-dropdown-toggle">
+              <span class="nav-menu-text">Services</span>
+              <svg width="8" height="5" viewBox="0 0 8 5"><path d="M1 1l3 3 3-3" stroke="white" stroke-width="1.5" fill="none"/></svg>
+            </div>
+            <div class="nav-dropdown-list">
+              <a href="#openclaw">OpenClaw Architecture</a>
+              <a href="#ai">AI & Machine Learning</a>
+              <a href="#web">Web Applications</a>
+              <a href="#mobile">Mobile Development</a>
+              <a href="#embedded">Embedded Systems</a>
+              <a href="#devops">DevOps & Cloud</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <div class="nav-dropdown-toggle">
+              <span class="nav-menu-text">Company</span>
+              <svg width="8" height="5" viewBox="0 0 8 5"><path d="M1 1l3 3 3-3" stroke="white" stroke-width="1.5" fill="none"/></svg>
+            </div>
+            <div class="nav-dropdown-list">
+              <a href="#about">About</a>
+              <a href="#work">Our Work</a>
+              <a href="#process">Process</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <div class="nav-dropdown-toggle">
+              <span class="nav-menu-text">Contact</span>
+              <svg width="8" height="5" viewBox="0 0 8 5"><path d="M1 1l3 3 3-3" stroke="white" stroke-width="1.5" fill="none"/></svg>
+            </div>
+            <div class="nav-dropdown-list">
+              <a href="#contact">Get in Touch</a>
+              <a href="mailto:hello@jdeviotechnolab.com">Email Us</a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-actions">
+          <a href="#contact" class="btn btn-gradient">
+            <span class="btn-text-wrap">
+              <span class="btn-text">Start a Project</span>
+              <span class="btn-text">Start a Project</span>
+            </span>
+            <svg class="btn-star" width="22" height="23" viewBox="0 0 22 23"><path d="M11 1l2.5 7.5H21l-6 4.5 2.5 7.5L11 16l-6.5 4.5L7 13 1 8.5h7.5L11 1z" fill="white"/></svg>
+          </a>
+          <button class="nav-toggle" id="navToggle">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
-      <button class="nav-toggle">
-        <span></span><span></span>
-      </button>
     </div>
   </nav>
 
   <main>
     <!-- Hero Section -->
-    <section class="hero" id="hero">
-      <div class="hero-grid">
-        <div class="hero-badge reveal-up">
-          <span class="badge-dot"></span>
-          Open for Projects • 2026
+    <section class="hero">
+      <div class="container-narrow">
+        <div class="hero-content">
+          <span class="sub-text sub-text-gradient reveal">6 Core Domains • 50+ Projects Delivered</span>
+          <h1 class="hero-title reveal delay-1">High-performance tech solutions for the AI era</h1>
+          <div class="hero-cta reveal delay-2">
+            <a href="#services" class="btn btn-gradient">
+              <span class="btn-text-wrap">
+                <span class="btn-text">Explore Services</span>
+                <span class="btn-text">Explore Services</span>
+              </span>
+              <svg class="btn-star" width="22" height="23" viewBox="0 0 22 23"><path d="M11 1l2.5 7.5H21l-6 4.5 2.5 7.5L11 16l-6.5 4.5L7 13 1 8.5h7.5L11 1z" fill="white"/></svg>
+            </a>
+          </div>
         </div>
-        <h1 class="hero-title">
-          <span class="line reveal-up delay-1">We engineer</span>
-          <span class="line reveal-up delay-2">
-            <span class="gradient-text">intelligent systems</span>
-          </span>
-          <span class="line reveal-up delay-3">for the real world.</span>
-        </h1>
-        <p class="hero-desc reveal-up delay-4">
-          A technology studio at the intersection of AI, modern software, and 
-          embedded hardware. We build products that think, apps that move, 
-          and systems that last.
-        </p>
-        <div class="hero-actions reveal-up delay-5">
-          <a href="#work" class="btn btn-primary">
-            View Our Work
-            <span class="btn-icon">→</span>
+      </div>
+      <!-- Scroll image showcase -->
+      <div class="hero-showcase">
+        <div class="showcase-track">
+          <div class="showcase-item"><div class="showcase-card s1"><span>🦞 OpenClaw</span></div></div>
+          <div class="showcase-item showcase-center"><div class="showcase-card s2"><span>🤖 AI & ML</span></div></div>
+          <div class="showcase-item"><div class="showcase-card s3"><span>📱 Mobile Apps</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About/Stats Section -->
+    <section class="about-stats" id="about">
+      <div class="container-narrow">
+        <div class="stats-grid reveal">
+          <div class="about-heading">
+            <h2>Craft a seamless and polished technology experience!</h2>
+          </div>
+          <div class="about-desc">
+            <p>"JDevio TechnoLab bridges cutting-edge AI, modern software engineering, and embedded hardware. From custom LLM agents to microcontroller firmware — we deliver production-grade solutions that scale."</p>
+          </div>
+        </div>
+        <div class="stat-cards reveal delay-1">
+          <div class="stat-card">
+            <div class="stat-card-inner">
+              <div class="stat-card-left">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Projects Delivered</div>
+                <p class="stat-desc">Production-ready solutions across industries</p>
+              </div>
+              <div class="stat-card-right">
+                <div class="stat-image-wrap">
+                  <div class="stat-image s1">🚀</div>
+                </div>
+                <div class="stat-image-wrap second">
+                  <div class="stat-image s2">💡</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stat-card stat-card-large">
+            <div class="stat-card-bg-image">
+              <div class="stat-bg-glow"></div>
+            </div>
+            <div class="stat-card-inner relative">
+              <div class="stat-card-left">
+                <div class="stat-number">6</div>
+                <div class="stat-label">Core Specialties</div>
+                <p class="stat-desc stat-desc-dark">End-to-end capability from cloud to microcontroller</p>
+              </div>
+            </div>
+            <div class="stat-card-overlay"></div>
+          </div>
+
+          <div class="stat-card stat-card-figma">
+            <div class="stat-figma-content">
+              <div class="stat-figma-icon">⚡</div>
+              <div class="stat-figma-text">
+                <h3>24/7 Support Available</h3>
+                <p>Round-the-clock assistance for critical systems and rapid issue resolution.</p>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-gradient">
+              <span class="btn-text-wrap">
+                <span class="btn-text">Get in Touch</span>
+                <span class="btn-text">Get in Touch</span>
+              </span>
+              <svg class="btn-star" width="22" height="23" viewBox="0 0 22 23"><path d="M11 1l2.5 7.5H21l-6 4.5 2.5 7.5L11 16l-6.5 4.5L7 13 1 8.5h7.5L11 1z" fill="white"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+      <div class="services-glow-bg">
+        <div class="services-glow-img"></div>
+        <div class="services-glow-overlay"></div>
+      </div>
+      <div class="container-wide">
+        <div class="section-header">
+          <div class="section-eyebrow reveal">
+            <span class="bullet"></span>
+            <span class="sub-text sub-text-gradient">6 CORE DOMAINS</span>
+          </div>
+          <h2 class="section-title reveal delay-1">Great collection of our technology services</h2>
+        </div>
+        <div class="services-grid">
+          <a href="#" class="service-card reveal" id="openclaw">
+            <div class="service-card-image">
+              <div class="service-image-placeholder si1">
+                <span class="service-emoji">🦞</span>
+              </div>
+            </div>
+            <h3 class="service-name">OpenClaw Architecture</h3>
           </a>
-          <a href="#expertise" class="btn btn-ghost">
-            Explore Capabilities
+          <a href="#" class="service-card reveal delay-1" id="ai">
+            <div class="service-card-image">
+              <div class="service-image-placeholder si2">
+                <span class="service-emoji">🤖</span>
+              </div>
+            </div>
+            <h3 class="service-name">AI & Machine Learning</h3>
+          </a>
+          <a href="#" class="service-card reveal delay-2" id="web">
+            <div class="service-card-image">
+              <div class="service-image-placeholder si3">
+                <span class="service-emoji">🌐</span>
+              </div>
+            </div>
+            <h3 class="service-name">Web Applications</h3>
+          </a>
+          <a href="#" class="service-card reveal delay-3" id="mobile">
+            <div class="service-card-image">
+              <div class="service-image-placeholder si4">
+                <span class="service-emoji">📱</span>
+              </div>
+            </div>
+            <h3 class="service-name">Mobile Development</h3>
+          </a>
+          <a href="#" class="service-card reveal delay-4" id="embedded">
+            <div class="service-card-image">
+              <div class="service-image-placeholder si5">
+                <span class="service-emoji">🔌</span>
+              </div>
+            </div>
+            <h3 class="service-name">Embedded Systems</h3>
+          </a>
+          <a href="#" class="service-card reveal delay-5" id="devops">
+            <div class="service-card-image">
+              <div class="service-image-placeholder si6">
+                <span class="service-emoji">⚙️</span>
+              </div>
+            </div>
+            <h3 class="service-name">DevOps & Cloud</h3>
           </a>
         </div>
-        <div class="hero-stats reveal-up delay-5">
-          <div class="hero-stat">
-            <span class="stat-num">50<span class="stat-plus">+</span></span>
-            <span class="stat-label">Projects</span>
-          </div>
-          <div class="hero-stat">
-            <span class="stat-num">6</span>
-            <span class="stat-label">Core Domains</span>
-          </div>
-          <div class="hero-stat">
-            <span class="stat-num">24<span class="stat-plus">/7</span></span>
-            <span class="stat-label">Support</span>
-          </div>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="hero-orb"></div>
-        <div class="hero-ring ring-1"></div>
-        <div class="hero-ring ring-2"></div>
-        <div class="hero-ring ring-3"></div>
-        <div class="hero-marquee">
-          <div class="marquee-track">
-            <span>AI</span><span>•</span><span>ML</span><span>•</span>
-            <span>iOS</span><span>•</span><span>Android</span><span>•</span>
-            <span>Web</span><span>•</span><span>Cloud</span><span>•</span>
-            <span>IoT</span><span>•</span><span>Embedded</span><span>•</span>
-            <span>OpenClaw</span><span>•</span><span>DevOps</span>
-          </div>
-        </div>
       </div>
     </section>
 
-    <!-- Work / Projects Showcase -->
-    <section class="work" id="work">
-      <div class="section-header reveal-up">
-        <span class="section-eyebrow">Selected Work</span>
-        <h2 class="section-title">What we've built<span class="title-accent">.</span></h2>
-      </div>
-      <div class="work-grid">
-        <article class="work-card reveal-up" data-delay="0">
-          <div class="work-image">
-            <div class="work-placeholder p1">
-              <span class="work-emoji">🦞</span>
+    <!-- Customization / CTA Section -->
+    <section class="custom-cta">
+      <div class="container-narrow">
+        <div class="custom-grid">
+          <div class="custom-card custom-left reveal">
+            <div class="custom-left-inner">
+              <div class="custom-icon">🎯</div>
+              <div class="custom-text-wrap">
+                <h3>Free consultation & project scoping</h3>
+                <p>Every project starts with a thorough discovery session. We analyze your requirements, propose the optimal tech stack, and provide a detailed roadmap — all before any commitment.</p>
+              </div>
+              <a href="#contact" class="btn btn-gradient">
+                <span class="btn-text-wrap">
+                  <span class="btn-text">Get Free Consultation</span>
+                  <span class="btn-text">Get Free Consultation</span>
+                </span>
+                <svg class="btn-star" width="22" height="23" viewBox="0 0 22 23"><path d="M11 1l2.5 7.5H21l-6 4.5 2.5 7.5L11 16l-6.5 4.5L7 13 1 8.5h7.5L11 1z" fill="white"/></svg>
+              </a>
             </div>
           </div>
-          <div class="work-info">
-            <span class="work-tag">Agent Infrastructure</span>
-            <h3>OpenClaw Enterprise Deployment</h3>
-            <p>Multi-agent orchestration system with custom plugin architecture for enterprise automation.</p>
-            <span class="work-link">View Case Study →</span>
-          </div>
-        </article>
-        <article class="work-card reveal-up" data-delay="150">
-          <div class="work-image">
-            <div class="work-placeholder p2">
-              <span class="work-emoji">🤖</span>
+          <div class="custom-card custom-right reveal delay-1">
+            <div class="custom-right-inner">
+              <div class="custom-right-top">
+                <div class="custom-tags">
+                  <span class="custom-tag">Limited</span>
+                  <span class="custom-tag-accent">Offer</span>
+                </div>
+                <div class="custom-right-title">Unlock <span class="custom-highlight">full-stack</span> development for your next project!</div>
+                <p class="custom-right-desc">End-to-end capability. One team. Zero handoffs.</p>
+              </div>
+              <div class="custom-right-bottom">
+                <div class="custom-figma-tag">
+                  <span>⚡</span> Rapid Delivery Guaranteed
+                </div>
+                <div class="custom-points">
+                  <div class="custom-point">
+                    <svg width="12" height="13" viewBox="0 0 12 13"><circle cx="6" cy="6.5" r="5" fill="none" stroke="#a78bfa" stroke-width="1.5"/><path d="M3.5 6.5l2 2 3-4" stroke="#a78bfa" stroke-width="1.5" fill="none"/></svg>
+                    <span>Agile development process</span>
+                  </div>
+                  <div class="custom-point">
+                    <svg width="12" height="13" viewBox="0 0 12 13"><circle cx="6" cy="6.5" r="5" fill="none" stroke="#a78bfa" stroke-width="1.5"/><path d="M3.5 6.5l2 2 3-4" stroke="#a78bfa" stroke-width="1.5" fill="none"/></svg>
+                    <span>Weekly progress updates</span>
+                  </div>
+                  <div class="custom-point">
+                    <svg width="12" height="13" viewBox="0 0 12 13"><circle cx="6" cy="6.5" r="5" fill="none" stroke="#a78bfa" stroke-width="1.5"/><path d="M3.5 6.5l2 2 3-4" stroke="#a78bfa" stroke-width="1.5" fill="none"/></svg>
+                    <span>Production-grade code & deployment</span>
+                  </div>
+                </div>
+                <div class="custom-cta-btn">
+                  <a href="#contact" class="btn btn-gradient">
+                    <span class="btn-text-wrap">
+                      <span class="btn-text">Start Your Project</span>
+                      <span class="btn-text">Start Your Project</span>
+                    </span>
+                    <svg class="btn-star" width="22" height="23" viewBox="0 0 22 23"><path d="M11 1l2.5 7.5H21l-6 4.5 2.5 7.5L11 16l-6.5 4.5L7 13 1 8.5h7.5L11 1z" fill="white"/></svg>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="work-info">
-            <span class="work-tag">AI / Machine Learning</span>
-            <h3>Computer Vision Pipeline</h3>
-            <p>Real-time object detection system processing 60+ FPS on edge devices for industrial QC.</p>
-            <span class="work-link">View Case Study →</span>
-          </div>
-        </article>
-        <article class="work-card reveal-up" data-delay="300">
-          <div class="work-image">
-            <div class="work-placeholder p3">
-              <span class="work-emoji">📱</span>
-            </div>
-          </div>
-          <div class="work-info">
-            <span class="work-tag">Mobile Development</span>
-            <h3>FinTech Mobile Suite</h3>
-            <p>Cross-platform banking application with real-time sync, biometric auth, and offline support.</p>
-            <span class="work-link">View Case Study →</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Expertise / Services Bento Grid -->
-    <section class="expertise" id="expertise">
-      <div class="section-header reveal-up">
-        <span class="section-eyebrow">Core Expertise</span>
-        <h2 class="section-title">Full-stack capability<span class="title-accent">.</span></h2>
-        <p class="section-desc">Six specialized domains. One cohesive team.</p>
-      </div>
-      <div class="bento-grid">
-        <div class="bento-card large reveal-up" data-delay="0">
-          <div class="bento-icon">🦞</div>
-          <div class="bento-content">
-            <h3 class="bento-title">OpenClaw Architecture</h3>
-            <p class="bento-desc">Custom agent infrastructure, multi-agent orchestration, plugin development, and gateway configuration. We build AI operations that scale.</p>
-            <div class="bento-chips">
-              <span>Agent Systems</span><span>Plugins</span><span>Gateway</span><span>Orchestration</span>
-            </div>
-          </div>
-          <div class="bento-glow"></div>
-        </div>
-
-        <div class="bento-card reveal-up" data-delay="100">
-          <div class="bento-icon">🤖</div>
-          <div class="bento-content">
-            <h3 class="bento-title">AI & Machine Learning</h3>
-            <p class="bento-desc">Custom models, LLM integration, computer vision, and NLP pipelines — from research to production.</p>
-            <div class="bento-chips">
-              <span>LLMs</span><span>CV</span><span>NLP</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="bento-card reveal-up" data-delay="200">
-          <div class="bento-icon">🌐</div>
-          <div class="bento-content">
-            <h3 class="bento-title">Web Applications</h3>
-            <p class="bento-desc">React, Next.js, Node.js — high-performance web apps with cloud-native architecture.</p>
-            <div class="bento-chips">
-              <span>React</span><span>Next.js</span><span>Node</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="bento-card reveal-up" data-delay="150">
-          <div class="bento-icon">📱</div>
-          <div class="bento-content">
-            <h3 class="bento-title">Mobile Development</h3>
-            <p class="bento-desc">Native iOS, Android, and cross-platform apps with buttery-smooth performance.</p>
-            <div class="bento-chips">
-              <span>Swift</span><span>Kotlin</span><span>Flutter</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="bento-card reveal-up" data-delay="250">
-          <div class="bento-icon">🔌</div>
-          <div class="bento-content">
-            <h3 class="bento-title">Embedded Systems</h3>
-            <p class="bento-desc">Microcontroller firmware, IoT sensor networks, and real-time control for industrial applications.</p>
-            <div class="bento-chips">
-              <span>Arduino</span><span>ESP32</span><span>STM32</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="bento-card reveal-up" data-delay="300">
-          <div class="bento-icon">⚙️</div>
-          <div class="bento-content">
-            <h3 class="bento-title">DevOps & Cloud</h3>
-            <p class="bento-desc">CI/CD, Docker, Kubernetes — infrastructure as code for reliable deployments.</p>
-            <div class="bento-chips">
-              <span>Docker</span><span>K8s</span><span>AWS</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Tech Stack Marquee -->
-    <section class="tech-strip">
-      <div class="strip-track">
-        <div class="strip-items">
-          <span>React</span><span>•</span><span>Next.js</span><span>•</span>
-          <span>Node.js</span><span>•</span><span>TypeScript</span><span>•</span>
-          <span>Python</span><span>•</span><span>PyTorch</span><span>•</span>
-          <span>TensorFlow</span><span>•</span><span>Swift</span><span>•</span>
-          <span>Kotlin</span><span>•</span><span>Flutter</span><span>•</span>
-          <span>Docker</span><span>•</span><span>Kubernetes</span><span>•</span>
-          <span>AWS</span><span>•</span><span>Arduino</span><span>•</span>
-          <span>ESP32</span><span>•</span><span>Raspberry Pi</span><span>•</span>
-          <span>OpenClaw</span>
-        </div>
-        <div class="strip-items" aria-hidden="true">
-          <span>React</span><span>•</span><span>Next.js</span><span>•</span>
-          <span>Node.js</span><span>•</span><span>TypeScript</span><span>•</span>
-          <span>Python</span><span>•</span><span>PyTorch</span><span>•</span>
-          <span>TensorFlow</span><span>•</span><span>Swift</span><span>•</span>
-          <span>Kotlin</span><span>•</span><span>Flutter</span><span>•</span>
-          <span>Docker</span><span>•</span><span>Kubernetes</span><span>•</span>
-          <span>AWS</span><span>•</span><span>Arduino</span><span>•</span>
-          <span>ESP32</span><span>•</span><span>Raspberry Pi</span><span>•</span>
-          <span>OpenClaw</span>
         </div>
       </div>
     </section>
 
     <!-- Process Section -->
-    <section class="process" id="process">
-      <div class="section-header reveal-up">
-        <span class="section-eyebrow">How We Work</span>
-        <h2 class="section-title">From concept to code<span class="title-accent">.</span></h2>
+    <section class="process-section" id="process">
+      <div class="services-glow-bg">
+        <div class="services-glow-img"></div>
+        <div class="services-glow-overlay"></div>
       </div>
-      <div class="process-timeline">
-        <div class="process-step reveal-up" data-delay="0">
-          <div class="step-number">01</div>
-          <div class="step-content">
+      <div class="container-wide">
+        <div class="section-header">
+          <div class="section-eyebrow reveal">
+            <span class="bullet"></span>
+            <span class="sub-text sub-text-gradient">HOW WE WORK</span>
+          </div>
+          <h2 class="section-title reveal delay-1">Our proven development process</h2>
+        </div>
+        <div class="process-grid">
+          <div class="process-card reveal">
+            <div class="process-card-image"><div class="process-placeholder pp1"><span>🔍</span></div></div>
             <h3>Discovery</h3>
-            <p>Deep-dive into your vision, requirements, and constraints. We ask the hard questions early to build right the first time.</p>
           </div>
-          <div class="step-line"></div>
-        </div>
-        <div class="process-step reveal-up" data-delay="150">
-          <div class="step-number">02</div>
-          <div class="step-content">
+          <div class="process-card reveal delay-1">
+            <div class="process-card-image"><div class="process-placeholder pp2"><span>🏗️</span></div></div>
             <h3>Architecture</h3>
-            <p>System design with scalability, security, and maintainability as first principles. Every component has a purpose.</p>
           </div>
-          <div class="step-line"></div>
-        </div>
-        <div class="process-step reveal-up" data-delay="300">
-          <div class="step-number">03</div>
-          <div class="step-content">
+          <div class="process-card reveal delay-2">
+            <div class="process-card-image"><div class="process-placeholder pp3"><span>💻</span></div></div>
             <h3>Development</h3>
-            <p>Clean, tested, documented code. Agile iterations with continuous feedback loops. You see progress, not promises.</p>
           </div>
-          <div class="step-line"></div>
-        </div>
-        <div class="process-step reveal-up" data-delay="450">
-          <div class="step-number">04</div>
-          <div class="step-content">
+          <div class="process-card reveal delay-3">
+            <div class="process-card-image"><div class="process-placeholder pp4"><span>🚀</span></div></div>
             <h3>Deploy & Iterate</h3>
-            <p>Automated CI/CD, monitoring, and analytics. We ship fast and improve faster based on real-world data.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-      <div class="about-grid">
-        <div class="about-text reveal-up">
-          <span class="section-eyebrow">About Us</span>
-          <h2 class="section-title">Not just builders<span class="title-accent">.</span><br>Engineers.</h2>
-          <p>JDevio TechnoLab bridges the gap between cutting-edge research and production-grade engineering. We don't just write code — we design systems that are reliable, scalable, and built to evolve.</p>
-          <p>Our team spans AI researchers, full-stack engineers, embedded systems specialists, and DevOps architects. This cross-domain DNA means we can take on projects others can't — from cloud infrastructure to microcontroller firmware, all under one roof.</p>
-          <div class="about-values">
-            <div class="value-chip">🎯 Precision Engineering</div>
-            <div class="value-chip">⚡ Rapid Delivery</div>
-            <div class="value-chip">🔒 Secure by Design</div>
-            <div class="value-chip">🔄 Continuous Innovation</div>
+    <!-- Utility / Tech Stack Section -->
+    <section class="utility-section">
+      <div class="container-narrow">
+        <div class="section-header utility-header">
+          <div class="section-eyebrow reveal">
+            <span class="bullet"></span>
+            <span class="sub-text sub-text-gradient">TECH STACK</span>
           </div>
+          <h2 class="section-title reveal delay-1">Technologies we work with</h2>
         </div>
-        <div class="about-visual reveal-up" data-delay="200">
-          <div class="code-block">
-            <div class="code-header">
-              <span class="code-dot c1"></span>
-              <span class="code-dot c2"></span>
-              <span class="code-dot c3"></span>
-              <span class="code-filename">jdevio-technolab.config</span>
+        <div class="utility-grid">
+          <div class="utility-card reveal">
+            <div class="utility-image">
+              <div class="utility-placeholder up1">
+                <span>🦞 OpenClaw</span>
+                <small>Agent Infrastructure</small>
+              </div>
             </div>
-            <pre><code><span class="code-keyword">studio</span> <span class="code-string">"JDevio TechnoLab"</span> {
-  <span class="code-prop">domains</span>    = [ai, web, mobile, embedded, devops]
-  <span class="code-prop">clients</span>   = <span class="code-number">50</span>+
-  <span class="code-prop">support</span>   = <span class="code-string">"24/7"</span>
-  <span class="code-prop">location</span>  = <span class="code-string">"India"</span>
-  
-  <span class="code-prop">philosophy</span> {
-    <span class="code-prop">build</span>    = <span class="code-string">"Production-first"</span>
-    <span class="code-prop">iterate</span>  = <span class="code-string">"Data-driven"</span>
-    <span class="code-prop">deploy</span>   = <span class="code-string">"Automated"</span>
-  }
-}</code></pre>
+            <h3>Agent Systems</h3>
+          </div>
+          <div class="utility-card reveal delay-1">
+            <div class="utility-image">
+              <div class="utility-placeholder up2">
+                <span>🧠 AI/ML</span>
+                <small>PyTorch • TensorFlow • LLMs</small>
+              </div>
+            </div>
+            <h3>Machine Learning</h3>
+          </div>
+          <div class="utility-card reveal delay-2">
+            <div class="utility-image">
+              <div class="utility-placeholder up3">
+                <span>🌐 Full Stack</span>
+                <small>React • Next.js • Node.js</small>
+              </div>
+            </div>
+            <h3>Web Development</h3>
+          </div>
+          <div class="utility-card reveal delay-3">
+            <div class="utility-image">
+              <div class="utility-placeholder up4">
+                <span>📱 Mobile</span>
+                <small>Swift • Kotlin • Flutter</small>
+              </div>
+            </div>
+            <h3>Mobile Apps</h3>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta" id="contact">
-      <div class="cta-inner reveal-up">
-        <h2 class="cta-title">Ready to build something <span class="gradient-text">extraordinary</span>?</h2>
-        <p class="cta-desc">Let's discuss your project. No pressure, no sales pitch — just a conversation about what you need and how we can help.</p>
-        <div class="cta-actions">
-          <a href="#" class="btn btn-primary btn-large" id="cta-button">
-            Start a Conversation
-            <span class="btn-icon">→</span>
-          </a>
-          <span class="cta-or">or</span>
-          <a href="mailto:hello@jdeviotechnolab.com" class="btn btn-ghost">Email Us</a>
+    <!-- Contact / Footer CTA -->
+    <section class="footer-cta" id="contact">
+      <div class="container-narrow">
+        <div class="footer-main">
+          <div class="footer-top-grid">
+            <div class="footer-logo-wrap">
+              <span class="footer-logo-text">JDevioTechnoLab</span>
+            </div>
+            <div class="footer-address">
+              <h3>Based in India • Working Worldwide</h3>
+            </div>
+            <div class="footer-email">
+              <a href="mailto:hello@jdeviotechnolab.com" class="footer-link-main">hello@jdeviotechnolab.com</a>
+            </div>
+          </div>
+          <div class="footer-links-section">
+            <div class="footer-line"></div>
+            <div class="footer-links-grid">
+              <div class="footer-cta-col">
+                <h3>Ready to build something extraordinary? Let's discuss your project.</h3>
+                <p>WhatsApp — <a href="#" class="footer-link-text">+91 9106360169</a></p>
+                <div class="footer-btn-wrap">
+                  <a href="mailto:hello@jdeviotechnolab.com" class="btn btn-gradient">
+                    <span class="btn-text-wrap">
+                      <span class="btn-text">Schedule a Call</span>
+                      <span class="btn-text">Schedule a Call</span>
+                    </span>
+                    <svg class="btn-star" width="22" height="23" viewBox="0 0 22 23"><path d="M11 1l2.5 7.5H21l-6 4.5 2.5 7.5L11 16l-6.5 4.5L7 13 1 8.5h7.5L11 1z" fill="white"/></svg>
+                  </a>
+                </div>
+              </div>
+              <div class="footer-links-col">
+                <h3>Services</h3>
+                <a href="#">OpenClaw Architecture</a>
+                <a href="#">AI & Machine Learning</a>
+                <a href="#">Web Applications</a>
+                <a href="#">Mobile Development</a>
+                <a href="#">Embedded Systems</a>
+              </div>
+              <div class="footer-links-col">
+                <h3>Company</h3>
+                <a href="#">About Us</a>
+                <a href="#">Our Work</a>
+                <a href="#">Process</a>
+                <a href="#">Blog</a>
+                <a href="#">Careers</a>
+              </div>
+              <div class="footer-links-col">
+                <h3>Connect</h3>
+                <a href="#">WhatsApp</a>
+                <a href="mailto:hello@jdeviotechnolab.com">Email</a>
+                <a href="#">GitHub</a>
+                <a href="#">LinkedIn</a>
+              </div>
+            </div>
+            <div class="footer-line"></div>
+          </div>
+          <div class="footer-bottom">
+            <p>© 2026 JDevio TechnoLab. Engineered with precision.</p>
+          </div>
         </div>
       </div>
     </section>
   </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <span class="footer-logo">JDevio<span class="logo-accent">TechnoLab</span></span>
-        <p>Engineering intelligent systems for the real world. AI • Software • Hardware.</p>
-        <div class="footer-mono">
-          <span class="mono-text">est. 2026</span>
-          <span class="mono-divider">|</span>
-          <span class="mono-text">India</span>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>Expertise</h4>
-        <a href="#">OpenClaw Architecture</a>
-        <a href="#">AI & Machine Learning</a>
-        <a href="#">Web Applications</a>
-        <a href="#">Mobile Development</a>
-        <a href="#">Embedded Systems</a>
-        <a href="#">DevOps & Cloud</a>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <a href="#">About</a>
-        <a href="#">Work</a>
-        <a href="#">Process</a>
-        <a href="#">Blog</a>
-        <a href="#">Careers</a>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <a href="mailto:hello@jdeviotechnolab.com">hello@jdeviotechnolab.com</a>
-        <a href="#">WhatsApp</a>
-        <a href="#">GitHub</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 JDevio TechnoLab</span>
-      <span>Crafted with precision. Powered by caffeine.</span>
-    </div>
-  </footer>
-
-  <!-- Toast notification -->
-  <div class="toast" id="toast">
-    <span class="toast-icon">✨</span>
-    <span class="toast-msg">Thanks! We'll be in touch within 24 hours.</span>
-  </div>
 
   <script src="script.js"></script>
 </body>
