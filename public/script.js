@@ -46,6 +46,17 @@ document.querySelectorAll('.service-card, .process-card, .utility-card').forEach
   });
 });
 
+// ===== PWA: Register Service Worker =====
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js').then((reg) => {
+      console.log('⚡ SW registered:', reg.scope);
+    }).catch((err) => {
+      console.log('SW registration failed:', err);
+    });
+  });
+}
+
 // ===== Console Easter Egg =====
 console.log(`
 ╔════════════════════════════════════╗
